@@ -15,13 +15,7 @@ versions.arch_core = '1.1.1'
 versions.rxjava = '2.1.7'
 versions.rxandroid = '2.0.2'
 versions.dagger = '2.15'
-versions.tinderCards = '1.0.0-beta9'
-versions.picasso = '2.71828'
-versions.segmentedButton = '1.0.6'
-versions.delegateAdapter = 'v2.0'
-versions.moneyTextView = '1.1.0'
 versions.licensesDialog = '1.8.3'
-versions.mapKit = '3.0.0'
 versions.deeplinkdispatch = '3.1.1'
 versions.appmetrika = '3.2.2'
 versions.install_referrer = '1.0'
@@ -38,13 +32,10 @@ versions.androidTestRules = '1.0.2'
 def deps = [:]
 //Негруппированные зависимости
 deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.gradle_plugin"
-deps.picasso = "com.squareup.picasso:picasso:$versions.picasso"
 deps.glide = "com.github.bumptech.glide:glide:$versions.glide"
 deps.glide_compiler = "com.github.bumptech.glide:compiler:$versions.glide"
 deps.licenses_dialog = "de.psdev.licensesdialog:licensesdialog:$versions.licensesDialog"
 deps.mapKit = "com.yandex.android:mapkit:$versions.mapKit"
-deps.deeplinks = "com.airbnb:deeplinkdispatch:$versions.deeplinkdispatch"
-deps.deeplinksProcessor = "com.airbnb:deeplinkdispatch-processor:$versions.deeplinkdispatch"
 deps.appmetrika = "com.yandex.android:mobmetricalib:$versions.appmetrika"
 deps.install_referrer = "com.yandex.android:mobmetricalib:$versions.install_referrer"
 
@@ -114,9 +105,6 @@ dagger.compiler = "com.google.dagger:dagger-compiler:$versions.dagger"
 deps.dagger = dagger
 
 def ui = [:]
-ui.tinderCards = "com.yuyakaido.android:card-stack-view:$versions.tinderCards"
-ui.segmentedButton = "info.hoang8f:android-segmented:$versions.segmentedButton"
-ui.delegateAdapters = "com.github.liverm0r:delegateadapters:$versions.delegateAdapter"
 deps.ui = ui
 
 def build_versions = [:]

@@ -14,7 +14,7 @@ android {
         versionCode 1
         versionName "1.0.0 от " + getDate()
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "DB_NAME", "\"yarealty.db\"")
+        buildConfigField("String", "DB_NAME", "\"creditsapp.db\"")
         buildConfigField("String", "BASE_URL", "\"https://api.realty.yandex.net/1.0/\"")
     }
 
@@ -44,8 +44,6 @@ android {
             testCoverageEnabled true
         }
         applicationVariants.all { variant ->
-            variant.buildConfigField "String", "REALTY_API_KEY", "\""+apiKeys.realtyApiKey+"\""
-            variant.buildConfigField "String", "MAPKIT_API_KEY", "\""+apiKeys.mapKitKey+"\""
             variant.buildConfigField "String", "YANDEX_METRIKA_API_KEY", "\""+apiKeys.yandexMetrikaKey+"\""
         }
     }
@@ -89,11 +87,8 @@ dependencies {
     implementation deps.support.card_view
 
     implementation deps.licenses_dialog
-    implementation deps.mapKit
     implementation deps.appmetrika
     implementation deps.install_referrer
-    implementation deps.deeplinks
-    kapt deps.deeplinksProcessor
 
     // VM
     implementation deps.arch.view_model
@@ -120,9 +115,6 @@ dependencies {
     kapt deps.dagger.compiler
 
     // UI
-    implementation deps.ui.tinderCards
-    implementation deps.ui.segmentedButton
-    implementation deps.ui.delegateAdapters
 
     // Testing
     testImplementation deps.tests.junit
