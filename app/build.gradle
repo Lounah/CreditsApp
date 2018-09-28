@@ -8,14 +8,14 @@ apply from: "$project.rootDir/secretconfig.gradle"
 android {
     compileSdkVersion build_versions.target_sdk
     defaultConfig {
-        applicationId "com.lounah.yarealty"
+        applicationId "com.lounah.creditsapp"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode 1
         versionName "1.0.0 от " + getDate()
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "DB_NAME", "\"creditsapp.db\"")
-        buildConfigField("String", "BASE_URL", "\"https://api.realty.yandex.net/1.0/\"")
+        buildConfigField("String", "BASE_URL", "\"http://ecopayment.club/\"")
     }
 
     lintOptions {
@@ -44,7 +44,7 @@ android {
             testCoverageEnabled true
         }
         applicationVariants.all { variant ->
-            variant.buildConfigField "String", "YANDEX_METRIKA_API_KEY", "\""+apiKeys.yandexMetrikaKey+"\""
+            variant.buildConfigField "String", "YANDEX_METRIKA_API_KEY", "\"" + apiKeys.yandexMetrikaKey + "\""
         }
     }
 
@@ -97,6 +97,7 @@ dependencies {
     // Room
     implementation deps.room.runtime
     implementation deps.room.rxjava
+    implementation 'com.google.firebase:firebase-firestore:17.1.0'
     kapt deps.room.compiler
 
     // Retrofit
@@ -114,7 +115,12 @@ dependencies {
     kapt deps.dagger.processor
     kapt deps.dagger.compiler
 
+    implementation 'com.google.firebase:firebase-core:16.0.3'
+
     // UI
+    implementation 'com.aurelhubert:ahbottomnavigation:2.1.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
 
     // Testing
     testImplementation deps.tests.junit
@@ -132,6 +138,8 @@ dependencies {
     implementation deps.glide
     kapt deps.glide_compiler
 }
+
+apply plugin: 'com.google.gms.google-services'
 
 task fullCoverageReport(type: JacocoReport) {
     dependsOn 'createDebugCoverageReport'
