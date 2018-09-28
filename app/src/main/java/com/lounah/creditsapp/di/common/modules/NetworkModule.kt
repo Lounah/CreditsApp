@@ -17,11 +17,13 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun provideGson() = GsonBuilder().create()
+    fun provideGson() = GsonBuilder()
+            .setLenient()
+            .create()
 
     @Singleton
     @Provides
-    fun provideRetrofit(httpClient: OkHttpClient, gson: Gson) = Retrofit.Builder()
+    fun provideRetrofit(gson: Gson) = Retrofit.Builder()
             .baseUrl(BuildConfig.BASE_URL)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create(gson))
