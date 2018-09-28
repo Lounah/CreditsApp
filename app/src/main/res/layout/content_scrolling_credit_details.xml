@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/baseBackgroundColor">
+
+        <TextView
+            android:id="@+id/tv_header_description"
+            style="@style/TextStyle.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/app_margin"
+            android:text="@string/description" />
+
+        <TextView
+            android:id="@+id/tv_creditofferdetails_description"
+            style="@style/TextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/app_margin"
+            android:layout_marginEnd="@dimen/app_margin"
+            android:maxLines="5"
+            android:ellipsize="end"
+            android:layout_below="@id/tv_header_description"/>
+
+        <Button
+            android:id="@+id/btn_expand_description"
+            style="@android:style/Widget.Material.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:layout_below="@id/tv_creditofferdetails_description"
+            android:layout_marginBottom="@dimen/app_margin"
+            android:layout_marginEnd="@dimen/app_margin"
+            android:layout_marginStart="@dimen/app_margin"
+            android:text="@string/expand_description" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_credit_types"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_expand_description" />
+
+        <TextView
+            android:id="@+id/tv_header_advanced_info"
+            style="@style/TextStyle.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_credit_types"
+            android:layout_margin="@dimen/app_margin"
+            android:text="@string/advanced_info" />
+
+        <TextView
+            android:id="@+id/tv_creditofferdetails_advanced_info"
+            style="@style/TextStyle"
+            android:layout_marginBottom="56dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/app_margin"
+            android:layout_marginEnd="@dimen/app_margin"
+            android:layout_below="@id/tv_header_advanced_info"/>
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_creditdetails_apply"-->
+            <!--style="@android:style/Widget.Material.Button"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/app_margin"-->
+            <!--android:background="@color/green"-->
+            <!--android:text="@string/apply"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_below="@id/tv_creditofferdetails_advanced_info"/>-->
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
