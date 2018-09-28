@@ -1,3 +1,20 @@
 <resources>
+    
+    <!-- App -->
     <string name="app_name">CreditsApp</string>
+    
+    <!-- Main Activity --> 
+    <string name="credits">Кредиты</string>
+    <string name="insurance">Страховка</string>
+    <string name="credits_history">История кредитов</string>
+    <string name="settings">Настройки</string>
+
+    <!-- Credit Offer Details -->
+    <string name="description">Описание</string>
+    <string name="expand_description">Подробнее</string>
+    <string name="hide">Скрыть</string>
+    <string name="advanced_info">Дополнительная информация</string>
+    <string name="borrow">Займы</string>
+    <string name="apply">Подать заявку</string>
+
 </resources>

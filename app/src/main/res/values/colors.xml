@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+
+    <!-- Base -->
+    <color name="green">#1b5e20</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey">#757575</color>
+    <color name="greyDark">#424242</color>
+    <color name="greyLight">#c4cdd1</color>
+    <color name="red">#ff5356</color>
+    <color name="redDark">#c22f32</color>
+    <color name="redLight">#ff6b6d</color>
+    <color name="yellow">#ffbb00</color>
+    <color name="yellowSemiTransparent">#52ffbb00</color>
+    <color name="blue">#00adff</color>
+    <color name="greySettingsTitle">#4e4e4e</color>
+    <color name="greySettingsItem">#585858</color>
+    <color name="greySemiTransparent">#3a757575</color>
+    <color name="greyIcon">#909090</color>
+
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/black</color>
+    <color name="colorAccent">@color/green</color>
+    <color name="baseBackgroundColor">#81f9f8f8</color>
+
 </resources>
