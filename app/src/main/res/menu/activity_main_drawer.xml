@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_credits"
+            android:icon="@drawable/ic_credits_24dp"
+            android:title="@string/credits" />
+        <item
+            android:id="@+id/nav_borrows"
+            android:icon="@drawable/ic_borrow"
+            android:title="@string/borrow" />
+        <item
+            android:id="@+id/nav_credits_history"
+            android:icon="@drawable/ic_history_24dp"
+            android:title="@string/credits_history" />
+    </group>
+
+    <item android:title="Cлужебное">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings_24dp"
+                android:title="@string/settings" />
+        </menu>
+    </item>
+
+</menu>

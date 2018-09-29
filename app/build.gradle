@@ -8,14 +8,14 @@ apply from: "$project.rootDir/secretconfig.gradle"
 android {
     compileSdkVersion build_versions.target_sdk
     defaultConfig {
-        applicationId "com.lounah.creditsapp"
+        applicationId "com.lounah.microzaymi"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode 1
         versionName "1.0.0 от " + getDate()
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "DB_NAME", "\"creditsapp.db\"")
-        buildConfigField("String", "BASE_URL", "\"http://ecopayment.club/\"")
+        buildConfigField("String", "BASE_URL", "\"http://exomoney.club/\"")
     }
 
     lintOptions {
@@ -116,11 +116,13 @@ dependencies {
     kapt deps.dagger.compiler
 
     implementation 'com.google.firebase:firebase-core:16.0.3'
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
 
     // UI
     implementation 'com.aurelhubert:ahbottomnavigation:2.1.0'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    implementation 'com.ncapdevi:frag-nav:2.4.0'
 
     // Testing
     testImplementation deps.tests.junit

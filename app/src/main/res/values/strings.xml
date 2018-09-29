@@ -2,6 +2,7 @@
     
     <!-- App -->
     <string name="app_name">CreditsApp</string>
+    <string name="facebook_app_id">2150370771879779</string>
     
     <!-- Main Activity --> 
     <string name="credits">Кредиты</string>

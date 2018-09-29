@@ -27,7 +27,7 @@
 -dontwarn okhttp3.
 -dontnote okhttp3.
 -dontwarn okhttp3.internal.platform.*
-#-keep class com.lounah.yarealty.data.entity. { *; }
+-keep class com.lounah.creditsapp.data.entity. { *; }
 
 # Okio
 -keep class sun.misc.Unsafe { *; }
@@ -41,8 +41,8 @@
 
 -dontwarn com.google.errorprone.annotations.**
 
-#-keep class com.lounah.yarealty.data.entity.** { *; }
-#-keep class com.lounah.yarealty.data.network.** { *; }
+-keep class com.lounah.creditsapp.data.entity.** { *; }
+-keep class com.lounah.creditsapp.data.network.** { *; }
 
 -keepclassmembers class * implements android.os.Parcelable {
     static ** CREATOR;
